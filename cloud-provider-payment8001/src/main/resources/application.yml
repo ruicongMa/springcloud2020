@@ -13,7 +13,8 @@ spring:
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.mrc.springcloud.entities
+  configuration:
+    map-underscore-to-camel-case: true
 
 
 
