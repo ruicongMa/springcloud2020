@@ -4,6 +4,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author Mark
  * @date 2020/3/28 14:38
@@ -21,13 +23,13 @@ public class PaymentService {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")  //3秒钟以内就是正常的业务逻辑
     })
     public String paymentInfo_TimeOut(Integer id) {
-        int timeNumber = 5;
-        // try {
-        //     TimeUnit.SECONDS.sleep(timeNumber);
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
-        System.out.println(10 / 0);
+        int timeNumber = 2;
+        try {
+            TimeUnit.SECONDS.sleep(timeNumber);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // System.out.println(10 / 0);
         return "线程池：" + Thread.currentThread().getName() + "   paymentInfo_TimeOut,id：  " + id + "\t" + "哈哈哈";
     }
 
