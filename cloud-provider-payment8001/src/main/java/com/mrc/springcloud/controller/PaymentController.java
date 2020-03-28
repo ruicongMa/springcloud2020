@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 以下判断代码都是伪代码，不是重点，企业里不会这么干！！！
@@ -65,6 +66,16 @@ public class PaymentController {
             log.info("支付微服务信息，serviceId = {}, host = {}, port = {}, uri = {}", serviceInstance.getServiceId(), serviceInstance.getHost(), serviceInstance.getPort(), serviceInstance.getUri());
         }
         return serviceInstanceList;
+    }
+
+    @GetMapping(value = "/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return String.valueOf(port);
     }
 
 }

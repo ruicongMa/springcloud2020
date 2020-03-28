@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 以下判断代码都是伪代码，不是重点，企业里不会这么干！！！
  *
@@ -45,6 +47,16 @@ public class PaymentController {
         } else {
             return new CommonResult(444, "查询为空" + port, null);
         }
+    }
+
+    @GetMapping(value = "/feign/timeout")
+    public String paymentFeignTimeout() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return String.valueOf(port);
     }
 
 }
