@@ -12,6 +12,7 @@
     <artifactId>cloud-alibaba-provider-payment9001</artifactId>
 
     <dependencies>
+        <!--nacos-discovery-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
