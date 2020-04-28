@@ -37,6 +37,7 @@
         <module>cloud-alibaba-config-nacos-client3377</module>
         <module>cloud-alibaba-sentinel-service8401</module>
         <module>mark-zoe</module>
+        <module>design-pattern</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
