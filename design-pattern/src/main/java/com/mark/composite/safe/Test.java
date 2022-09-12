@@ -16,7 +16,7 @@ public class Test {
 
         File word = new File("word.exe");
         File ppt = new File("powerpoint.exe");
-        File excel = new File("excel.ext");
+        File excel = new File("excel.exe");
 
         office.add(word);
         office.add(ppt);
@@ -35,5 +35,7 @@ public class Test {
         root.show();
         System.out.println("================list()方法效果======================");
         root.list();
+
+
     }
 }

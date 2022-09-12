@@ -4,7 +4,7 @@ package com.mark.chain.eg;
  * @author Mark
  * @date 2020/5/19 19:52
  */
-public class AuthHandler extends Handler {
+public class AuthHandler extends Handler<Member> {
     @Override
     public void doHandle(Member member) {
         if (!"管理员".equals(member.getRoleName())) {

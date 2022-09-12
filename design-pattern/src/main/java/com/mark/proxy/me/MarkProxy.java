@@ -28,7 +28,7 @@ public class MarkProxy {
 
             //2、Java文件输出磁盘
             String filePath = MarkProxy.class.getResource("").getPath();
-            System.out.println(filePath);
+            // System.out.println(filePath);
             File f = new File(filePath + "$Proxy0.java");
             FileWriter fw = new FileWriter(f);
             fw.write(src);

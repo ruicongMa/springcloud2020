@@ -8,13 +8,13 @@ import java.util.List;
  * @author Mark
  * @date 2020/5/13 12:05
  */
-public class MemberDao extends JdbcTemplate {
+public class MemberDao extends JdbcTemplate<Member> {
 
     public MemberDao(DataSource dataSource) {
         super(dataSource);
     }
 
-    public List<?> selectAll() {
+    public List<Member> selectAll() {
         String sql = "select * from t_member";
         return super.executeQuery(sql, new RowMapper<Member>() {
             @Override

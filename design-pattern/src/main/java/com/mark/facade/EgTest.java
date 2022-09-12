@@ -7,7 +7,7 @@ package com.mark.facade;
 public class EgTest {
 
     public static void main(String[] args) {
-        GiftInfo giftInfo = new GiftInfo("《Spring5核心原理》");
+        GiftInfo giftInfo = new GiftInfo("《DDD是什么鬼？》");
         GiftFacadeService facadeService = new GiftFacadeService();
         facadeService.exchange(giftInfo);
     }

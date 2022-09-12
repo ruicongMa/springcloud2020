@@ -10,4 +10,9 @@ public class ZhaoLiu implements IPerson {
     public void findLove() {
         System.out.println("赵六要求：有车有房有学历");
     }
+
+    @Override
+    public void test() {
+
+    }
 }

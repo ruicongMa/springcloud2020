@@ -4,14 +4,14 @@ package com.mark.decorator.v2;
  * @author Mark
  * @date 2020/5/7 11:47
  */
-public class BaseBatterCake extends BatterCake {
+public class BaseBatterCake implements BatterCake {
     @Override
-    protected String getMsg() {
+    public String getMsg() {
         return "煎饼";
     }
 
     @Override
-    protected int getPrice() {
+    public int getPrice() {
         return 5;
     }
 }

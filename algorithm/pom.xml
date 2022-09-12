@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud2020</artifactId>
+        <groupId>com.mrc.springcloud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>algorithm</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>BinaryTree</module>
+        <module>UnionFindSets</module>
+        <module>Graph</module>
+        <module>Recursive</module>
+        <module>DP</module>
+        <module>SlidingWindow</module>
+        <module>MonotonousStack</module>
+        <module>FibonacciProblem</module>
+        <module>KMP</module>
+        <module>SortedTable</module>
+        <module>coding-for-great-offer</module>
+        <module>TrieTree</module>
+        <module>ExpressionCompute</module>
+        <module>basic</module>
+        <module>leetcode-top-interview-questions</module>
+        <module>leetcode-top-100-liked-questions</module>
+        <module>trainingcamp003</module>
+        <module>trainingcamp004</module>
+        <module>trainingcamp005</module>
+        <module>weekly-problems</module>
+    </modules>
+
+</project>

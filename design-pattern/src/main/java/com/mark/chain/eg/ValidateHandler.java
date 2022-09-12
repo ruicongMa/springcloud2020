@@ -4,7 +4,7 @@ package com.mark.chain.eg;
  * @author Mark
  * @date 2020/5/19 19:45
  */
-public class ValidateHandler extends Handler {
+public class ValidateHandler extends Handler<Member> {
     @Override
     public void doHandle(Member member) {
         if (null == member.getLoginName() || member.getLoginName().trim().equals("")) {

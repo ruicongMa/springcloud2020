@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @author Mark
  * @date 2020/5/22 13:29
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.mark.state.statemachine")
 public class Test {
 
     public static void main(String[] args) {
@@ -34,6 +34,7 @@ public class Test {
         orderService.receive(2);
 
         System.out.println("全部订单状态：" + orderService.getOrders());
+
     }
 
 }

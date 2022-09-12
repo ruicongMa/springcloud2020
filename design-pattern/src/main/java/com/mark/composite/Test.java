@@ -26,5 +26,6 @@ public class Test {
         catalog.addChild(coursePackage);
 
         catalog.print();
+
     }
 }

@@ -15,14 +15,14 @@ public class MarkClassLoader extends ClassLoader {
 
     public MarkClassLoader() {
         String path = MarkClassLoader.class.getResource("").getPath();
-        System.out.println("MarkClassLoader path = " + path);
+        // System.out.println("MarkClassLoader path = " + path);
         this.classPathFile = new File(path);
     }
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         String className = MarkClassLoader.class.getPackage().getName() + "." + name;
-        System.out.println("findClass className = " + className);
+        // System.out.println("findClass className = " + className);
         if (classPathFile != null) {
             File classFile = new File(classPathFile, name.replaceAll("\\.", "/") + ".class");
             if (classFile.exists()) {

@@ -15,8 +15,8 @@ public class JDKProxyTest {
 
     public static void main(String[] args) {
         try {
-            IPerson zhangSan = new JdkMeiRen().getInstance(new ZhangSan());
-            zhangSan.findLove();
+            // IPerson zhangSan = new JdkMeiRen().getInstance(new ZhangSan());
+            // zhangSan.findLove();
 
             byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{IPerson.class});
             FileOutputStream fos = new FileOutputStream("$Proxy0.class");

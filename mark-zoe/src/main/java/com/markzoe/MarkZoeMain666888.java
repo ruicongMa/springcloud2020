@@ -3,6 +3,8 @@ package com.markzoe;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author Mark
@@ -10,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan("com.markzoe.dao")
+// @EnableTransactionManagement
+@EnableAspectJAutoProxy
 public class MarkZoeMain666888 {
 
     public static void main(String[] args) {

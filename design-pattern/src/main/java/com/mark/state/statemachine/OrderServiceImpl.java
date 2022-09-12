@@ -20,8 +20,8 @@ public class OrderServiceImpl implements IOrderService {
     @Autowired
     private StateMachine<OrderStatus, OrderStatusChangeEvent> orderStateMachine;
 
-    @Autowired
-    private StateMachinePersist<OrderStatus, OrderStatusChangeEvent, Order> persist;
+    // @Autowired
+    // private StateMachinePersist<OrderStatus, OrderStatusChangeEvent, Order> persist;
 
     private int id = 1;
     private Map<Integer, Order> orders = new HashMap<>();

@@ -9,10 +9,10 @@ public class Test {
     public static void main(String[] args) {
         IMessage message = new SmsMessage();
         AbstractMessage abstractMessage = new NormalMessage(message);
-        abstractMessage.sendMessage("加班申请特批", "马总");
+        abstractMessage.sendMessage("加班申请特批", "moe");
 
         message = new EmailMessage();
         abstractMessage = new UrgencyMessage(message);
-        abstractMessage.sendMessage("加班申请特批", "马总");
+        abstractMessage.sendMessage("加班申请特批", "zoe");
     }
 }

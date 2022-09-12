@@ -34,4 +34,5 @@ public class PowerAdapter implements DC {
     public int output36V() {
         return 0;
     }
+
 }

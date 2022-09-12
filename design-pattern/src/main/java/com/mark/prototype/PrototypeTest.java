@@ -24,8 +24,8 @@ public class PrototypeTest {
 
         //拷贝原型对象
         // ConcretePrototype cloneType = concretePrototype.clone();
-        // ConcretePrototype cloneType = concretePrototype.deepClone();
-        ConcretePrototype cloneType = concretePrototype.deepCloneHobbies();
+        ConcretePrototype cloneType = concretePrototype.deepClone();
+        // ConcretePrototype cloneType = concretePrototype.deepCloneHobbies();
         cloneType.getHobbies().add("swing");
         System.out.println("原型对象：" + concretePrototype);
         System.out.println("克隆对象：" + cloneType);

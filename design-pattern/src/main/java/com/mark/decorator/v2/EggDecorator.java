@@ -16,12 +16,12 @@ public class EggDecorator extends BatterCakeDecorator {
     }
 
     @Override
-    protected String getMsg() {
+    public String getMsg() {
         return super.getMsg() + "+1个鸡蛋";
     }
 
     @Override
-    protected int getPrice() {
+    public int getPrice() {
         return super.getPrice() + 1;
     }
 }

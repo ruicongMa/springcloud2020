@@ -1,5 +1,6 @@
 package com.mark.singleton;
 
+import com.mark.singleton.innerclass.LazyInnerClassSingleton;
 import com.mark.singleton.serializable.SerializableSingleton;
 import org.junit.Test;
 
@@ -28,6 +29,31 @@ public class SerializableSingletonTest {
             FileInputStream fis = new FileInputStream("serializableSingleton.obj");
             ObjectInputStream ois = new ObjectInputStream(fis);
             SerializableSingleton s2 = (SerializableSingleton) ois.readObject();
+            ois.close();
+
+            System.out.println("s1=" + s1);
+            System.out.println("s2=" + s2);
+            System.out.println(s1 == s2);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void test2() {
+        try {
+            LazyInnerClassSingleton s1 = LazyInnerClassSingleton.getInstance();
+            FileOutputStream fos = new FileOutputStream("serializableSingleton.obj");
+
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(s1);
+            oos.flush();
+            oos.close();
+
+            FileInputStream fis = new FileInputStream("serializableSingleton.obj");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            LazyInnerClassSingleton s2 = (LazyInnerClassSingleton) ois.readObject();
             ois.close();
 
             System.out.println("s1=" + s1);

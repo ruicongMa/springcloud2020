@@ -12,7 +12,7 @@ import java.util.List;
  * @author Mark
  * @date 2020/5/13 11:23
  */
-public abstract class JdbcTemplate {
+public abstract class JdbcTemplate<T> {
 
     private DataSource dataSource;
 
@@ -20,7 +20,7 @@ public abstract class JdbcTemplate {
         this.dataSource = dataSource;
     }
 
-    public final List<?> executeQuery(String sql, RowMapper<?> rowMapper, Object[] values) {
+    public final List<T> executeQuery(String sql, RowMapper<T> rowMapper, Object[] values) {
         try {
             //1.获取连接
             Connection conn = this.getConnection();
@@ -29,7 +29,7 @@ public abstract class JdbcTemplate {
             //3.执行语句集
             ResultSet rs = this.executeQuery(ps, values);
             //4.处理结果集
-            List<?> result = this.parseResultSet(rs, rowMapper);
+            List<T> result = this.parseResultSet(rs, rowMapper);
             //5.关闭结果集
             rs.close();
             //6.关闭语句集
@@ -43,8 +43,8 @@ public abstract class JdbcTemplate {
         return null;
     }
 
-    private List<?> parseResultSet(ResultSet rs, RowMapper<?> rowMapper) throws Exception {
-        List<Object> result = new ArrayList<>();
+    private List<T> parseResultSet(ResultSet rs, RowMapper<T> rowMapper) throws Exception {
+        List<T> result = new ArrayList<>();
         int rowNum = 0;
         while (rs.next()) {
             result.add(rowMapper.mapRow(rs, rowNum++));

@@ -1,13 +1,19 @@
 package com.markzoe;
 
+import com.markzoe.entities.User1;
+import com.markzoe.properties.PersonProperty;
 import com.markzoe.service.User1Service;
 import com.markzoe.service.User2Service;
+import com.markzoe.service.UserService;
 import com.markzoe.service.UserTransactionTestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.annotation.Resource;
 
 /**
  * @author Mark
@@ -17,14 +23,39 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = MarkZoeMain666888.class)
 public class TransactionTest {
 
-    @Autowired
-    private User1Service user1Service;
 
     @Autowired
     private User2Service user2Service;
 
     @Autowired
     private UserTransactionTestService userTransactionTestService;
+
+    @Autowired
+    private PersonProperty personProperty;
+
+    @Resource(name = "service1")
+    private UserService userService;
+
+    @Test
+    public void test1() {
+        System.out.println(userService);
+    }
+
+    @Autowired
+    private User1Service user1Service;
+
+    @Test
+    public void testTrans() {
+        System.out.println(user1Service.getClass());
+        User1 user1 = new User1();
+        user1.setName("张三");
+        user1Service.test(user1);
+    }
+
+    @Test
+    public void test() {
+        System.out.println(personProperty);
+    }
 
     @Test
     public void transaction_nested_nested_exception_try() {

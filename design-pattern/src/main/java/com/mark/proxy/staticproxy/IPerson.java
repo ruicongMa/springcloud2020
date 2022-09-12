@@ -6,4 +6,6 @@ package com.mark.proxy.staticproxy;
  */
 public interface IPerson {
     void findLove();
+
+    void test();
 }

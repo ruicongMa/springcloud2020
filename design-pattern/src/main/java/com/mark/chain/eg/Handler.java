@@ -12,7 +12,7 @@ public abstract class Handler<T> {
         this.chain = handler;
     }
 
-    public abstract void doHandle(Member member);
+    public abstract void doHandle(T t);
 
     public static class Builder<T> {
         private Handler<T> head;

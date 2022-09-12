@@ -16,12 +16,12 @@ public class SausageDecorator extends BatterCakeDecorator {
     }
 
     @Override
-    protected String getMsg() {
+    public String getMsg() {
         return super.getMsg() + "+1根香肠";
     }
 
     @Override
-    protected int getPrice() {
+    public int getPrice() {
         return super.getPrice() + 2;
     }
 }

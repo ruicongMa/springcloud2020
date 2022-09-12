@@ -4,7 +4,7 @@ package com.mark.decorator.v1;
  * @author Mark
  * @date 2020/5/7 11:19
  */
-public class BatterCakeWithEggAndSausage extends BatterCake {
+public class BatterCakeWithEggAndSausage extends BatterCakeWithEgg {
 
     @Override
     protected String getMsg() {

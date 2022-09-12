@@ -18,4 +18,9 @@ public class ZhangLaoSan implements IPerson {
         zhangSan.findLove();
         System.out.println("开始交往");
     }
+
+    @Override
+    public void test() {
+
+    }
 }

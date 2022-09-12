@@ -10,9 +10,9 @@ public abstract class CourseComponent {
         throw new UnsupportedOperationException("不支持添加操作");
     }
 
-    public void removeChild(CourseComponent catalogComponent) {
-        throw new UnsupportedOperationException("不支持删除操作");
-    }
+  public void removeChild(CourseComponent catalogComponent) {
+      throw new UnsupportedOperationException("不支持删除操作");
+  }
 
     public String getName(CourseComponent catalogComponent) {
         throw new UnsupportedOperationException("不支持获取名称操作");
